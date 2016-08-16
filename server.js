@@ -1,7 +1,10 @@
 var app = require('express')() //express server
 var server = require('http').createServer(app) //http wrapper server
 var io = require('socket.io').listen(server) //socket.io in charge
+var open = require('open');
 server.listen(8080)
+open('http://localhost:8080/tester/');
+
 
 // watch .js and .css files
 watch = require('node-watch')
