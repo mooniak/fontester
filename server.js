@@ -3,7 +3,7 @@ var server = require('http').createServer(app) //http wrapper server
 var io = require('socket.io').listen(server) //socket.io in charge
 var open = require('open');
 server.listen(8080)
-open('http://localhost:8080/tester/');
+open('http://localhost:8080/tester/tests/');
 
 
 // watch .js and .css files
