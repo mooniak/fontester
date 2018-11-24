@@ -18,12 +18,12 @@ var Metalsmith = require('metalsmith'),
 
 Metalsmith(__dirname)
 .use(ignore([
-  'partials/*',
-  'layouts/*'
+  '_partials/*',
+  '_layouts/*'
 ]))
 .use(collections({
     tests: {
-        pattern: '.src/*/*.md'
+        pattern: '.src/tests/*/*.md'
     }
     }))
   .use(
@@ -45,11 +45,11 @@ Metalsmith(__dirname)
  .use(rootPath())
   .use(layouts({
     engine: 'handlebars',
-    partials: './src/partials',
-    directory: './src/layouts'
+    partials: './src/_partials',
+    directory: './src/_layouts'
   }))
   .source('./src')
-  .destination('./tester/languages/')
+  .destination('./tester/tests/')
   .build(function(err) {
     if (err) throw err;
   });

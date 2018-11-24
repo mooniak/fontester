@@ -1,0 +1,33 @@
+<script src="../{{rootPath}}assets/js/font-tester.js"></script>
+<script src="../{{rootPath}}config.js"></script>
+<script charset="utf-8" src="../{{rootPath}}assets/js/otfeatures.js" type="text/javascript"></script>
+<script src="../{{rootPath}}assets/js/transliterate.js" /></script>
+<script>
+  // OT Features Panel
+  $('#showhide').click(function() {
+    $('#otfeatures').slideToggle("fast", function() {
+      $("#showhide").text($(this).is(':visible') ? "Hide OpenType Features ↑" : "OpenType Features ↓");
+    });
+  });
+  // Side navigation
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "350px";
+    document.getElementById("closebtn").style.display = "block";
+    document.getElementById("openbtn").style.display = "none";
+  }
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("closebtn").style.display = "none";
+    document.getElementById("openbtn").style.display = "block";
+  }
+</script>
+<footer>
+  <div class="container">
+    © fontester project contributors.
+  </div>
+</footer>
+</body>
+</html>
